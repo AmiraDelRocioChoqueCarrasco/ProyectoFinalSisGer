@@ -1,0 +1,43 @@
+{
+	"name": "ds_sink_bja_inscripcion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_beneficiaria",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_inscripcion",
+				"type": "date"
+			},
+			{
+				"name": "estado",
+				"type": "varchar"
+			},
+			{
+				"name": "id_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "silver",
+			"table": "bja_inscripciones"
+		}
+	}
+}
