@@ -1,0 +1,51 @@
+{
+	"name": "ds_sink_spl_entregas_agencia",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_beneficiaria",
+				"type": "varchar"
+			},
+			{
+				"name": "id_asignacion",
+				"type": "varchar"
+			},
+			{
+				"name": "id_producto",
+				"type": "varchar"
+			},
+			{
+				"name": "cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_entrega",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_lote",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "spl_entregas_agencia"
+		}
+	}
+}
