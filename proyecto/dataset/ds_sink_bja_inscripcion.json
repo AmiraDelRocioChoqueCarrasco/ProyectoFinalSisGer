@@ -36,7 +36,7 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "silver",
+			"schema": "bronze",
 			"table": "bja_inscripciones"
 		}
 	}
