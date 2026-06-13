@@ -28,8 +28,11 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS bronze.spl_entregas_agencia",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
