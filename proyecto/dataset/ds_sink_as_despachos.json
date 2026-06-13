@@ -1,0 +1,55 @@
+{
+	"name": "ds_sink_as_despachos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "id_producto",
+				"type": "varchar"
+			},
+			{
+				"name": "id_almacen",
+				"type": "varchar"
+			},
+			{
+				"name": "id_vehiculo",
+				"type": "varchar"
+			},
+			{
+				"name": "cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_lote",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_despacho",
+				"type": "varchar"
+			},
+			{
+				"name": "programa_destino",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "as_despachos"
+		}
+	}
+}
