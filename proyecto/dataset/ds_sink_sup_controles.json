@@ -1,0 +1,47 @@
+{
+	"name": "ds_sink_sup_controles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_beneficiaria",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_control",
+				"type": "varchar"
+			},
+			{
+				"name": "semanas_gestacion",
+				"type": "varchar"
+			},
+			{
+				"name": "trimestre",
+				"type": "varchar"
+			},
+			{
+				"name": "id_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "sup_controles"
+		}
+	}
+}
