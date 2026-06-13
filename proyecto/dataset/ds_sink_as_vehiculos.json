@@ -1,0 +1,51 @@
+{
+	"name": "ds_sink_as_vehiculos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "id_producto",
+				"type": "varchar"
+			},
+			{
+				"name": "id_almacen",
+				"type": "varchar"
+			},
+			{
+				"name": "cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_lote",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_recepcion",
+				"type": "varchar"
+			},
+			{
+				"name": "conformidad",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "as_recepciones"
+		}
+	}
+}
