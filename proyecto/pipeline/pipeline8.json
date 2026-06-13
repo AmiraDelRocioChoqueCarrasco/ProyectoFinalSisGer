@@ -117,7 +117,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_bja_inscripciones",
+						"referenceName": "ds_sup_inscripciones",
 						"type": "DatasetReference"
 					}
 				],
