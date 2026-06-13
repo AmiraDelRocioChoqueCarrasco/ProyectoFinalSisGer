@@ -28,86 +28,15 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS bronze.bja_controles_prenatales",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "control_prenatal_id",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "id",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "ci_beneficiaria",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ci_beneficiaria",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "fecha_control",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "fecha_control",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "nro_control",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "numero_control",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "semana_gestacion",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "semanas_gestacion",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "establecimiento_id",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "id_establecimiento",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
