@@ -1,0 +1,51 @@
+{
+	"name": "ds_sink_sup_entregas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_boleta",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_beneficiaria",
+				"type": "varchar"
+			},
+			{
+				"name": "id_producto",
+				"type": "varchar"
+			},
+			{
+				"name": "cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_entrega",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_lote",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "sup_entregas"
+		}
+	}
+}

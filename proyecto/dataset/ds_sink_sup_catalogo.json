@@ -1,0 +1,43 @@
+{
+	"name": "ds_sink_sup_catalogo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre",
+				"type": "varchar"
+			},
+			{
+				"name": "categoria",
+				"type": "varchar"
+			},
+			{
+				"name": "unidad_medida",
+				"type": "varchar"
+			},
+			{
+				"name": "trimestre",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "sup_catalogo"
+		}
+	}
+}
