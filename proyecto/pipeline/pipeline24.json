@@ -28,98 +28,15 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS bronze.as_vehiculos",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "vehiculo_id",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "id",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "transportista_id",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "id_producto",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "descripcion",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "id_almacen",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "placa",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "cantidad",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "tipo",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "numero_lote",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "capacidad_kg",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "fecha_recepcion",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "estado",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "conformidad",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
