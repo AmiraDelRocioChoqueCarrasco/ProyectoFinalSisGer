@@ -36,6 +36,11 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "almacen_id",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "id",
 									"type": "String",
@@ -79,17 +84,15 @@
 								}
 							},
 							{
+								"source": {
+									"name": "capacidad_m3",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "capacidad",
 									"type": "String",
 									"physicalType": "varchar"
-								}
-							},
-							{
-								"sink": {
-									"name": "fecha_carga",
-									"type": "DateTime",
-									"physicalType": "datetime"
 								}
 							}
 						],
