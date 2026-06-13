@@ -1,0 +1,55 @@
+{
+	"name": "ds_sink_bja_controles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_nino",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_madre",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_control",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_control",
+				"type": "varchar"
+			},
+			{
+				"name": "peso_kg",
+				"type": "varchar"
+			},
+			{
+				"name": "talla_cm",
+				"type": "varchar"
+			},
+			{
+				"name": "id_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "bja_controles_pediatricos"
+		}
+	}
+}

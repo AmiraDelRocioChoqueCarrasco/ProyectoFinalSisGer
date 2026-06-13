@@ -1,0 +1,12 @@
+{
+	"name": "ds_sink_bja_inscripciones",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

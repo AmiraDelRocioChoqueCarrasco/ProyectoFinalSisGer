@@ -1,0 +1,47 @@
+{
+	"name": "ds_sink_bja_partos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destino_dw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_madre",
+				"type": "varchar"
+			},
+			{
+				"name": "ci_recien_nacido",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_parto",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_parto",
+				"type": "varchar"
+			},
+			{
+				"name": "id_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha_carga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "bja_partos"
+		}
+	}
+}
