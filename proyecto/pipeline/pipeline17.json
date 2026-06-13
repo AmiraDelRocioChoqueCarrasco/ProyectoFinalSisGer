@@ -94,6 +94,18 @@
 									"type": "String",
 									"physicalType": "varchar"
 								}
+							},
+							{
+								"source": {
+									"name": "lote",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "numero_lote",
+									"type": "String",
+									"physicalType": "varchar"
+								}
 							}
 						],
 						"typeConversion": true,
